@@ -13,6 +13,10 @@ const UserInfoPage = () => {
 
   let [users, setUsers] = useState([])
 
+  const handleSendParams = () => {
+    navigate("/Aluguel?tittle=Aluguel&user=JohnDoe");
+  };
+
   async function getUsers() {
     let usersFromApi = await Api.get("/usuarios")
     setUsers(usersFromApi.data)
@@ -28,7 +32,7 @@ const UserInfoPage = () => {
       const senhaExists = users.some(user => user.cpf == inputCpf.current.value);
       if (senhaExists) {
         alert("Bem Vindo(a)!");
-        clienteLogado(); // Redirecionar para rota correta
+        handleSendParams() // Redirecionar para rota correta
       } else {
         alert("Senha incorreta")
         

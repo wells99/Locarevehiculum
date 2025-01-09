@@ -2,7 +2,7 @@ import { useState,useRef } from "react";
 import {FaUser, FaLock,FaHome,FaPhone, FaMapMarkerAlt, FaCar} from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 import "./Login.css";
-import { useNavigate } from "react-router-dom";
+
 import Api from "../services/api";
 import { TbBrandCashapp } from "react-icons/tb";
 import { MdOutlineWatchLater } from "react-icons/md";
@@ -18,17 +18,13 @@ const RentUser = () => {
 
   const handleSubmit = (event) =>{
     event.preventDefault();
-   
     createUsers()
-    
   };
 
   const navigate = useNavigate();
 
-  function onSeeDetailsClick() {
-    navigate(`/UserInfo`)
-  }
-
+  console.log(tittle);
+  
   const [users, setUsers] = useState([])
 
     let inputName = useRef()
@@ -39,7 +35,7 @@ const RentUser = () => {
 
      function createUsers() {
       let meuForm = {
-        nomecadastrado:"Fulanim",
+        nomecadastrado:`${tittle}`,
         emailCadastrado:inputEmail.current.value,
         cpfCadastrado:inputCpf.current.value,
         enderecoCadastrado:inputEndereco.current.value,
@@ -57,7 +53,7 @@ const RentUser = () => {
     }
 
   return (
-    <div id="Appdiv" className="lg:flex-row gap-4 ">
+    <div id="Appdiv" className="flex lg:flex-row flex-col gap-4 min-h-fit min-w-fit ">
         <div className="containerLogin">
           <form onSubmit={handleSubmit}>
 

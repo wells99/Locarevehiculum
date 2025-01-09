@@ -43,12 +43,6 @@ const CadastroUser = () => {
         telefoneCadastrado:inputTelefone.current.value
       }
 
-      console.log(meuForm.nomecadastrado);
-      console.log(meuForm.emailCadastrado);
-      console.log(meuForm.cpfCadastrado);
-      console.log(meuForm.enderecoCadastrado);
-      console.log(meuForm.telefoneCadastrado);
-
       await Api.post("/usuarios", {
         name:meuForm.nomecadastrado,
         email:meuForm.emailCadastrado,
@@ -57,6 +51,7 @@ const CadastroUser = () => {
         phone:meuForm.telefoneCadastrado
       });
 
+      alert("Cadastrado")
         // Limpa os campos de input
       inputName.current.value = '';
       inputEmail.current.value = '';
