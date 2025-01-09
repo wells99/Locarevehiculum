@@ -1,4 +1,4 @@
-// © 2025 Movida Aluguel de Carros | Todos os direitos reservados.
+
 
 const Footer = () => {
 

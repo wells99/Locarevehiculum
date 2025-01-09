@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+    text-shadow: #000000 1px 1px;
+    
+}
+
+#Appdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.containerLogin{
+    height: 80%;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+
+    h1{
+        text-align: center;
+        font-size: 30px;
+        color: #ffffff;
+    }
+    
+    .input-field{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 12px auto;
+    }
+
+    .input-field input{
+        width: 100%;
+        height: 80%;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 20px 25px;
+    }
+
+    .input-field input::placeholder{
+        color: #ffffff;
+    }
+
+    .input-field .icon{
+        position: absolute;
+        right: 25px;
+        margin-top: 4%;
+        transform: translate(-50%);
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+
+
+}
+
+
+.containerLogin .recall-forget{
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px 5px;
+    margin: -15px 0 15px;
+
+    label{
+        
+        color: #ffffff;
+    }
+
+    label,a{
+        margin: 4px;
+    }
+
+    input{
+        margin-right: 5px;
+    }
+
+    a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+}
+
+.containerLogin .signup-link p a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.containerLogin .signup-link p a:hover{
+    text-decoration: underline;
+}
+
+.containerLogin button{
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: 600;
+    text-shadow: none;
+    
+}
+.containerLogin button:hover{
+    background-color: #ebc556;
+    transition: 300ms ease-in-out;
+    font-size: large;
+    
+}
+
+.containerLogin .signup-link{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0 10px;
+    text-shadow: none;
+
+}
+
+.containerLogin .signup-link p{
+    color: gray;
+    font-weight: 500;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+
+

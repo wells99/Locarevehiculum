@@ -65,12 +65,20 @@ const CarList = () => {
                         <InfoItem icon={CarIcons.PortaMalas} text={carro.portaMalas} />
                       </div>
                     </div>
+                    <div className="flex flex-row gap-2">
                     <button
                       onClick={() => handleFlip(carro.id)}
                       className="py-2 px-4 mt-5 bg-white text-black rounded-md hover:bg-yellow-500 transition duration-200"
                     >
                       Voltar
                     </button>
+                    <button
+                      onClick={() => alert(carro.id)}
+                      className="py-2 px-4 mt-5 bg-white text-black rounded-md hover:bg-yellow-500 transition duration-200"
+                    >
+                      Selecionar
+                    </button>
+                    </div>
                   </div>
                 </div>
               </div>

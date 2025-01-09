@@ -19,6 +19,9 @@ function Home() {
   async function getUsers() {
    let usersFromApi = await Api.get("/usuarios")
    setUsers(usersFromApi.data)
+
+   console.log(users);
+   
   }
 
   //createUsers pega as informações dos inputs e manda para o banco de dados.
